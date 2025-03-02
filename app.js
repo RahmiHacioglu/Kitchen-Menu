@@ -278,3 +278,47 @@ button2.addEventListener("click",function(){
       
       }
       })
+
+      document.addEventListener("DOMContentLoaded", function() {
+        let myDiv = document.getElementById("row");
+myDiv.innerHTML = "";
+for(let i=0;i<menu.length;i++){
+  let div1=document.createElement("div")
+  div1.classList.add("menu-items", "col-lg-6", "col-sm-12")
+
+
+  
+  let img = document.createElement("img");
+  img.src = menu[i].img; // Resim kaynağını doğru şekilde atıyoruz
+  img.alt = ""
+  img.classList.add("photo");
+  div1.appendChild(img)
+
+
+  let div2=document.createElement("div")
+  div2.classList.add("menu-info","float-end")
+
+  let div3=document.createElement("div")
+  div3.classList.add("menu-title")
+
+  text1=document.createElement("h4")
+  text2=document.createElement("h4")
+
+  text1.innerHTML=menu[i].title
+  text2.innerHTML=menu[i].price
+  div3.appendChild(text1)
+  div3.appendChild(text2)
+  div2.appendChild(div3)
+
+  let div4=document.createElement("div")
+  div4.classList.add("menu-text")
+  div4.innerHTML=menu[i].desc
+  div2.appendChild(div4)
+  
+  div1.appendChild(div2)
+  
+  myDiv.append(div1)
+
+}
+})
+      
