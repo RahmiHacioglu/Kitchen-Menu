@@ -81,3 +81,200 @@ const menu = [
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
+let divDOM=document.querySelector("#buttons")
+
+let button1=document.createElement("button")
+button1.innerHTML="All"
+button1.classList.add("btn-item","btn", "btn-outline-dark","btn-lg")
+
+let button2=document.createElement("button")
+button2.innerHTML="Korea"
+button2.classList.add("btn-item","btn", "btn-outline-dark","btn-lg")
+
+let button3=document.createElement("button")
+button3.innerHTML="Japan"
+button3.classList.add("btn-item","btn", "btn-outline-dark","btn-lg")
+
+let button4=document.createElement("button")
+button4.innerHTML="China"
+button4.classList.add("btn-item","btn", "btn-outline-dark","btn-lg")
+
+divDOM.append(button1)
+divDOM.append(button2)
+divDOM.append(button3)
+divDOM.append(button4)
+
+button1.addEventListener("click",function(){
+let myDiv = document.getElementById("row");
+myDiv.innerHTML = "";
+for(let i=0;i<menu.length;i++){
+  let div1=document.createElement("div")
+  div1.classList.add("menu-items", "col-lg-6", "col-sm-12")
+
+
+  
+  let img = document.createElement("img");
+  img.src = menu[i].img; // Resim kaynağını doğru şekilde atıyoruz
+  img.alt = ""
+  img.classList.add("photo");
+  div1.appendChild(img)
+
+
+  let div2=document.createElement("div")
+  div2.classList.add("menu-info","float-end")
+
+  let div3=document.createElement("div")
+  div3.classList.add("menu-title")
+
+  text1=document.createElement("h4")
+  text2=document.createElement("h4")
+
+  text1.innerHTML=menu[i].title
+  text2.innerHTML=menu[i].price
+  div3.appendChild(text1)
+  div3.appendChild(text2)
+  div2.appendChild(div3)
+
+  let div4=document.createElement("div")
+  div4.classList.add("menu-text")
+  div4.innerHTML=menu[i].desc
+  div2.appendChild(div4)
+  
+  div1.appendChild(div2)
+  
+  myDiv.append(div1)
+
+}
+})
+
+button2.addEventListener("click",function(){
+  let myDiv = document.getElementById("row");
+  myDiv.innerHTML = "";
+  for(let i=0;i<menu.length;i++){
+    if(menu[i].category==="Korea"){
+    let div1=document.createElement("div")
+    div1.classList.add("menu-items", "col-lg-6", "col-sm-12")
+  
+  
+    
+    let img = document.createElement("img");
+    img.src = menu[i].img; // Resim kaynağını doğru şekilde atıyoruz
+    img.alt = ""
+    img.classList.add("photo");
+    div1.appendChild(img)
+  
+  
+    let div2=document.createElement("div")
+    div2.classList.add("menu-info","float-end")
+  
+    let div3=document.createElement("div")
+    div3.classList.add("menu-title")
+  
+    text1=document.createElement("h4")
+    text2=document.createElement("h4")
+  
+    text1.innerHTML=menu[i].title
+    text2.innerHTML=menu[i].price
+    div3.appendChild(text1)
+    div3.appendChild(text2)
+    div2.appendChild(div3)
+  
+    let div4=document.createElement("div")
+    div4.classList.add("menu-text")
+    div4.innerHTML=menu[i].desc
+    div2.appendChild(div4)
+    
+    div1.appendChild(div2)
+    
+    myDiv.append(div1)}
+  
+  }
+  })
+
+  button3.addEventListener("click",function(){
+    let myDiv = document.getElementById("row");
+    myDiv.innerHTML = "";
+    for(let i=0;i<menu.length;i++){
+      if(menu[i].category==="Japan"){
+      let div1=document.createElement("div")
+      div1.classList.add("menu-items", "col-lg-6", "col-sm-12")
+    
+    
+      
+      let img = document.createElement("img");
+      img.src = menu[i].img; // Resim kaynağını doğru şekilde atıyoruz
+      img.alt = ""
+      img.classList.add("photo");
+      div1.appendChild(img)
+    
+    
+      let div2=document.createElement("div")
+      div2.classList.add("menu-info","float-end")
+    
+      let div3=document.createElement("div")
+      div3.classList.add("menu-title")
+    
+      text1=document.createElement("h4")
+      text2=document.createElement("h4")
+    
+      text1.innerHTML=menu[i].title
+      text2.innerHTML=menu[i].price
+      div3.appendChild(text1)
+      div3.appendChild(text2)
+      div2.appendChild(div3)
+    
+      let div4=document.createElement("div")
+      div4.classList.add("menu-text")
+      div4.innerHTML=menu[i].desc
+      div2.appendChild(div4)
+      
+      div1.appendChild(div2)
+      
+      myDiv.append(div1)}
+    
+    }
+    })
+
+    button4.addEventListener("click",function(){
+      let myDiv = document.getElementById("row");
+      myDiv.innerHTML = "";
+      for(let i=0;i<menu.length;i++){
+        if(menu[i].category==="China"){
+        let div1=document.createElement("div")
+        div1.classList.add("menu-items", "col-lg-6", "col-sm-12")
+      
+      
+        
+        let img = document.createElement("img");
+        img.src = menu[i].img; // Resim kaynağını doğru şekilde atıyoruz
+        img.alt = ""
+        img.classList.add("photo");
+        div1.appendChild(img)
+      
+      
+        let div2=document.createElement("div")
+        div2.classList.add("menu-info","float-end")
+      
+        let div3=document.createElement("div")
+        div3.classList.add("menu-title")
+      
+        text1=document.createElement("h4")
+        text2=document.createElement("h4")
+      
+        text1.innerHTML=menu[i].title
+        text2.innerHTML=menu[i].price
+        div3.appendChild(text1)
+        div3.appendChild(text2)
+        div2.appendChild(div3)
+      
+        let div4=document.createElement("div")
+        div4.classList.add("menu-text")
+        div4.innerHTML=menu[i].desc
+        div2.appendChild(div4)
+        
+        div1.appendChild(div2)
+        
+        myDiv.append(div1)}
+      
+      }
+      })
